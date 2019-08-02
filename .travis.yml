@@ -1,0 +1,40 @@
+matrix:
+  include:
+    - language: go
+      before_install:
+        - cd go
+      script:
+        - go test *.go -coverprofile=coverage.txt
+      after_success:
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: node_js
+      node_js: "node"
+      before_install:
+        - cd javascript
+      install:
+        - npm install
+        - npm install -g nyc codecov
+      script:
+        - nyc --reporter=text-lcov npm test > coverage.lcov
+        - codecov
+
+    - language: php
+      before_install:
+        - cd php
+      script:
+        - phpunit huifier_test.php
+      after_success:
+        - bash <(curl -s https://codecov.io/bash)
+
+    - language: python
+      python:
+        - "3.6"
+      before_install:
+        - cd python
+      install:
+        - pip install codecov
+      script:
+        - coverage run huifier_test.py
+      after_success:
+        - codecov

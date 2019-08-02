@@ -1,0 +1,16 @@
+<phpunit>
+  <testsuites>
+    <testsuite name="huifier">
+      <file>huifier_test.php</file>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <whitelist processUncoveredFilesFromWhitelist="true">
+      <file>huifier.php</file>
+      <file>huifier_test.php</file>
+    </whitelist>
+  </filter>
+  <logging>
+    <log type="coverage-clover" target="coverage.xml"/>
+  </logging>
+</phpunit>

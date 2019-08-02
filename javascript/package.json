@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "main": "huifier.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jasmine huifier_test.js"
+  },
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  }
+}
