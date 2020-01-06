@@ -9,3 +9,4 @@ Russian huifier implemented in different programming languages:
 - [JavaScript](javascript)
 - [PHP](php)
 - [Python](python)
+- [Swift](swift)
