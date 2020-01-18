@@ -1,1 +1,0 @@
-HuifierTests.defaultTestSuite.run()
