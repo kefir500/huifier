@@ -19,6 +19,17 @@ matrix:
         - nyc --reporter=text-lcov npm test > coverage.lcov
         - codecov
 
+    - language: node_js
+      node_js: "node"
+      before_install:
+        - cd typescript
+      install:
+        - npm install
+        - npm install -g nyc codecov
+      script:
+        - nyc --reporter=text-lcov npm test > coverage.lcov
+        - codecov
+
     - language: php
       before_install:
         - cd php

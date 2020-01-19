@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "main": "huifier.ts",
+  "scripts": {
+    "start": "ts-node index.js",
+    "test": "ts-node node_modules/jasmine/bin/jasmine huifier_test.ts"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.3.13",
+    "jasmine": "^3.4.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
+  }
+}
