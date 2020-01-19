@@ -1,5 +1,8 @@
 matrix:
   include:
+
+    # Go
+
     - language: go
       before_install:
         - cd go
@@ -7,6 +10,8 @@ matrix:
         - go test *.go -coverprofile=coverage.txt
       after_success:
         - bash <(curl -s https://codecov.io/bash)
+
+    # JavaScript
 
     - language: node_js
       node_js: "node"
@@ -19,16 +24,7 @@ matrix:
         - nyc --reporter=text-lcov npm test > coverage.lcov
         - codecov
 
-    - language: node_js
-      node_js: "node"
-      before_install:
-        - cd typescript
-      install:
-        - npm install
-        - npm install -g nyc codecov
-      script:
-        - nyc --reporter=text-lcov npm test > coverage.lcov
-        - codecov
+    # PHP
 
     - language: php
       before_install:
@@ -37,6 +33,8 @@ matrix:
         - phpunit huifier_test.php
       after_success:
         - bash <(curl -s https://codecov.io/bash)
+
+    # Python
 
     - language: python
       python:
@@ -48,4 +46,27 @@ matrix:
       script:
         - coverage run huifier_test.py
       after_success:
+        - codecov
+
+    # Ruby
+
+    - language: ruby
+      before_install:
+        - cd ruby
+      install:
+        - gem install codecov
+      script:
+        - ruby tc_huifier.rb
+
+    # TypeScript
+
+    - language: node_js
+      node_js: "node"
+      before_install:
+        - cd typescript
+      install:
+        - npm install
+        - npm install -g nyc codecov
+      script:
+        - nyc --reporter=text-lcov npm test > coverage.lcov
         - codecov
