@@ -1,10 +1,3 @@
-if ENV['CI'] == 'true'
-  require 'simplecov'
-  require 'codecov'
-  SimpleCov.start
-  SimpleCov.formatter = SimpleCov::Formatter::Codecov
-end
-
 require_relative 'huifier'
 require 'test/unit'
  
