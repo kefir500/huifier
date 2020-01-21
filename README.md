@@ -10,5 +10,6 @@ Russian huifier (huificator) implemented in different programming languages:
 - [PHP](php)
 - [Python](python)
 - [Ruby](ruby)
+- [Rust](rust)
 - [Swift](swift)
 - [TypeScript](typescript)

@@ -58,6 +58,12 @@ matrix:
       script:
         - ruby tc_huifier.rb
 
+    # Rust
+
+    - language: rust
+      before_install:
+        - cd rust
+
     # TypeScript
 
     - language: node_js

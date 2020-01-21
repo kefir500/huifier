@@ -1,0 +1,6 @@
+[package]
+name = "huifier"
+version = "1.0.0"
+authors = ["Alexander Gorishnyak <kefir500@gmail.com>"]
+
+[dependencies]
