@@ -7,6 +7,12 @@ matrix:
       before_install:
         - cd go
 
+    # Java
+
+    - language: java
+      before_install:
+        - cd java
+
     # JavaScript
 
     - language: node_js

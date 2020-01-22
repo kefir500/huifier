@@ -5,6 +5,7 @@
 Russian huifier (huificator) implemented in different programming languages:
 
 - [Go](go)
+- [Java](java)
 - [JavaScript](javascript)
 - [PHP](php)
 - [Python](python)
