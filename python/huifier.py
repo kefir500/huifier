@@ -17,6 +17,6 @@ def huify(word):
             word = word[1:]
     return 'Ху' + word if word else 'Хуй'
 
-if __name__ == '__main__': # pragma: no cover
+if __name__ == '__main__':
     print('Введите слово:')
     print(huify(input()))
