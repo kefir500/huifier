@@ -1,4 +1,5 @@
 import XCTest
+
 public class HuifierTests: XCTestCase {
     
     let huifier = Huifier()

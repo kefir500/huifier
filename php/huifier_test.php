@@ -31,7 +31,7 @@ class HuifyTest extends TestCase
     }
 
     public function testLetterCase()
-    {    
+    {
         $this->assertSame('Хуилка', huify('Вилка'));
         $this->assertSame('Хуилка', huify('вилка'));
         $this->assertSame('Хуилка', huify('вилка'));

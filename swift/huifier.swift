@@ -1,4 +1,5 @@
 import Foundation
+
 class Huifier {
     
     func huify(word: String) -> String {

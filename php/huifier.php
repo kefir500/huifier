@@ -21,5 +21,5 @@ function huify($word) {
             $word = mb_substr($word, 1);
         }
     }
-    return empty($word) ? 'Хуй' : 'Ху'. $word;
+    return empty($word) ? 'Хуй' : 'Ху' . $word;
 }
