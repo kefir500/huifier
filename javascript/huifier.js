@@ -1,25 +1,25 @@
 function huify(word) {
-  word = word.toLowerCase().trim();
+  let result = word.toLowerCase().trim();
   const vowels = 'аеёиоуыэюя';
   const rules = {
-    'а': 'я',
-    'о': 'ё',
-    'у': 'ю',
-    'ы': 'и',
-    'э': 'е',
-  }
-  while (word.length) {
-    const letter = word[0];
-    if (vowels.indexOf(letter) != -1) {
+    а: 'я',
+    о: 'ё',
+    у: 'ю',
+    ы: 'и',
+    э: 'е',
+  };
+  while (result.length) {
+    const letter = result[0];
+    if (vowels.indexOf(letter) !== -1) {
       if (letter in rules) {
-        word = rules[letter] + word.slice(1);
+        result = rules[letter] + result.slice(1);
       }
       break;
     } else {
-      word = word.slice(1);
+      result = result.slice(1);
     }
   }
-  return word ? `Ху${word}` : 'Хуй';
+  return result ? `Ху${result}` : 'Хуй';
 }
 
 if (typeof module !== 'undefined' && module.exports) {

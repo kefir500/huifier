@@ -3,9 +3,13 @@
   "main": "huifier.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jasmine huifier_test.js"
+    "test": "jasmine huifier_test.js",
+    "lint": "eslint huifier.js index.js"
   },
   "devDependencies": {
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
     "jasmine": "^3.4.0"
   }
 }
