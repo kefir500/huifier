@@ -1,8 +1,9 @@
-let huifier = require('./huifier');
-let stdin = process.stdin;
+const huify = require('./huifier');
+
+const { stdin } = process;
 stdin.setEncoding('utf-8');
 console.log('Введите слово:');
-stdin.on('data', function (data) {
-  console.log(huifier(data));
+stdin.on('data', (data) => {
+  console.log(huify(data));
   process.exit();
 });
