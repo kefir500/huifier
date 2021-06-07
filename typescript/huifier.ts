@@ -8,15 +8,13 @@ class Huifier {
     new Rule('э', 'е'),
   ];
   private applyRule(letter: string): string {
-    const replacement = this.rules.find(rule => {
-      return letter === rule.from;
-    })
+    const replacement = this.rules.find(rule => letter === rule.from);
     return replacement ? replacement.to : letter;
   }
   huify(word: string): string {    
     word = word.toLowerCase().trim();
     while (word.length) {
-      const letter = word.charAt(0);
+      const letter = word[0];
       if (this.vowels.includes(letter)) {
         word = this.applyRule(letter) + word.slice(1);
         break;
@@ -24,7 +22,7 @@ class Huifier {
         word = word.slice(1);
       }
     }
-    return word ? 'Ху' + word : 'Хуй';
+    return word ? `Ху${word}` : 'Хуй';
   }
 }
 
