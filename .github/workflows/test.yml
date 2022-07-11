@@ -1,0 +1,88 @@
+name: Huifier Tests
+on: [push, pull_request]
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-go@v3
+      - name: Run tests
+        run: |
+          cd go
+          go test *.go
+  java:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+      - name: Run tests
+        run: |
+          cd java
+          gradle test
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Run tests
+        run: |
+          cd javascript
+          npm ci
+          npm test
+  php:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: shivammathur/setup-php@v2
+        with:
+          tools: phpunit
+      - name: Run tests
+        run: |
+          cd php
+          phpunit
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Run tests
+        run: |
+          cd python
+          python -m unittest huifier_test.py
+  ruby:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0'
+      - name: Run tests
+        run: |
+          cd ruby
+          ruby tc_huifier.rb
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+      - name: Run tests
+        run: |
+          cd rust
+          cargo test
+  typescript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Run tests
+        run: |
+          cd typescript
+          npm ci
+          npm test
