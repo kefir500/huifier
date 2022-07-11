@@ -1,10 +1,10 @@
 require_relative 'huifier'
 require 'test/unit'
- 
+
 class TestHuifier < Test::Unit::TestCase
   def test_random_words
     assert_equal('Хуилка', huify('Вилка'))
-    assert_equal('Хуёлик', huify('Толик'))
+    assert_equal('Хуелик', huify('Толик'))
     assert_equal('Хуяблоко', huify('Яблоко'))
     assert_equal('Хуясный', huify('Красный'))
     assert_equal('Хуюассан', huify('Круассан'))
@@ -16,7 +16,7 @@ class TestHuifier < Test::Unit::TestCase
     assert_equal('Хуедут', huify('Едут'))
     assert_equal('Хуёжик', huify('Ёжик'))
     assert_equal('Хуиглу', huify('Иглу'))
-    assert_equal('Хуёкна', huify('Окна'))
+    assert_equal('Хуекна', huify('Окна'))
     assert_equal('Хуюрна', huify('Урна'))
     assert_equal('Хуик', huify('Стык'))
     assert_equal('Хуепос', huify('Эпос'))
@@ -37,6 +37,6 @@ class TestHuifier < Test::Unit::TestCase
     assert_equal('Хуй', huify('   '))
     assert_equal('Хуилка', huify('  Вилка  '))
     assert_equal('Хуй', huify('Й'))
-    assert_equal('Хуё', huify('О'))
+    assert_equal('Хуя', huify('А'))
   end
 end

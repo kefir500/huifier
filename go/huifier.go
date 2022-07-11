@@ -15,7 +15,7 @@ func Huify(word string) string {
     vowels := "аеёиоуыэюя"
     rules := map[rune]rune{
         'а': 'я',
-        'о': 'ё',
+        'о': 'е',
         'у': 'ю',
         'ы': 'и',
         'э': 'е',

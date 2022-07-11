@@ -10,7 +10,7 @@ public class Huifier {
         String vowels = "аеёиоуыэюя";
         HashMap<Character, Character> rules = new HashMap<Character, Character>();
         rules.put('а', 'я');
-        rules.put('о', 'ё');
+        rules.put('о', 'е');
         rules.put('у', 'ю');
         rules.put('ы', 'и');
         rules.put('э', 'е');
@@ -28,4 +28,3 @@ public class Huifier {
         return word.isEmpty() ? "Хуй" : "Ху" + word;
     }
 }
-

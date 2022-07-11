@@ -1,13 +1,13 @@
 import Foundation
 
 class Huifier {
-    
+
     func huify(word: String) -> String {
         var result = word.lowercased()
         let vowels = "аеёиоуыэюя"
         let rules = [
             "а": "я",
-            "о": "ё",
+            "о": "е",
             "у": "ю",
             "ы": "и",
             "э": "е"
@@ -27,5 +27,5 @@ class Huifier {
         }
         return (result.isEmpty ? "хуй" : "ху\(result)").capitalized.trimmingCharacters(in: NSCharacterSet.whitespaces)
     }
-    
+
 }

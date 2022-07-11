@@ -2,7 +2,7 @@ class Huifier {
   private vowels: string = 'аеёиоуыэюя';
   private rules: Rule[] = [
     new Rule('а', 'я'),
-    new Rule('о', 'ё'),
+    new Rule('о', 'е'),
     new Rule('у', 'ю'),
     new Rule('ы', 'и'),
     new Rule('э', 'е'),
@@ -11,7 +11,7 @@ class Huifier {
     const replacement = this.rules.find(rule => letter === rule.from);
     return replacement ? replacement.to : letter;
   }
-  huify(word: string): string {    
+  huify(word: string): string {
     word = word.toLowerCase().trim();
     while (word.length) {
       const letter = word[0];

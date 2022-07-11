@@ -3,7 +3,7 @@ extern crate huifier;
 #[test]
 fn test_random_words() {
     assert_eq!(huifier::huify("Вилка"), "Хуилка");
-    assert_eq!(huifier::huify("Толик"), "Хуёлик");
+    assert_eq!(huifier::huify("Толик"), "Хуелик");
     assert_eq!(huifier::huify("Яблоко"), "Хуяблоко");
     assert_eq!(huifier::huify("Красный"), "Хуясный");
     assert_eq!(huifier::huify("Круассан"), "Хуюассан");
@@ -16,7 +16,7 @@ fn test_vowel_rules() {
     assert_eq!(huifier::huify("Едут"), "Хуедут");
     assert_eq!(huifier::huify("Ёжик"), "Хуёжик");
     assert_eq!(huifier::huify("Иглу"), "Хуиглу");
-    assert_eq!(huifier::huify("Окна"), "Хуёкна");
+    assert_eq!(huifier::huify("Окна"), "Хуекна");
     assert_eq!(huifier::huify("Урна"), "Хуюрна");
     assert_eq!(huifier::huify("Стык"), "Хуик");
     assert_eq!(huifier::huify("Эпос"), "Хуепос");
@@ -39,5 +39,5 @@ fn test_normalization() {
     assert_eq!(huifier::huify("   "), "Хуй");
     assert_eq!(huifier::huify("  Вилка  "), "Хуилка");
     assert_eq!(huifier::huify("Й"), "Хуй");
-    assert_eq!(huifier::huify("О"), "Хуё");
+    assert_eq!(huifier::huify("А"), "Хуя");
 }

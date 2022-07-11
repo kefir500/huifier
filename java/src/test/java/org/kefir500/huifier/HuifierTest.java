@@ -10,7 +10,7 @@ public class HuifierTest {
     public void testRandomWords() {
         Huifier huifier = new Huifier();
         assertEquals("Хуилка", huifier.huify("Вилка"));
-        assertEquals("Хуёлик", huifier.huify("Толик"));
+        assertEquals("Хуелик", huifier.huify("Толик"));
         assertEquals("Хуяблоко", huifier.huify("Яблоко"));
         assertEquals("Хуясный", huifier.huify("Красный"));
         assertEquals("Хуюассан", huifier.huify("Круассан"));
@@ -24,7 +24,7 @@ public class HuifierTest {
         assertEquals("Хуедут", huifier.huify("Едут"));
         assertEquals("Хуёжик", huifier.huify("Ёжик"));
         assertEquals("Хуиглу", huifier.huify("Иглу"));
-        assertEquals("Хуёкна", huifier.huify("Окна"));
+        assertEquals("Хуекна", huifier.huify("Окна"));
         assertEquals("Хуюрна", huifier.huify("Урна"));
         assertEquals("Хуик", huifier.huify("Стык"));
         assertEquals("Хуепос", huifier.huify("Эпос"));
@@ -49,6 +49,6 @@ public class HuifierTest {
         assertEquals("Хуй", huifier.huify("   "));
         assertEquals("Хуилка", huifier.huify("  Вилка  "));
         assertEquals("Хуй", huifier.huify("Й"));
-        assertEquals("Хуё", huifier.huify("О"));
+        assertEquals("Хуя", huifier.huify("А"));
     }
 }

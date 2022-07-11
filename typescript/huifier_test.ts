@@ -6,7 +6,7 @@ import { Huifier } from './huifier';
 
   it('should huify words', function () {
     expect(huifier.huify('Вилка')).toEqual('Хуилка');
-    expect(huifier.huify('Толик')).toEqual('Хуёлик');
+    expect(huifier.huify('Толик')).toEqual('Хуелик');
     expect(huifier.huify('Яблоко')).toEqual('Хуяблоко');
     expect(huifier.huify('Красный')).toEqual('Хуясный');
     expect(huifier.huify('Круассан')).toEqual('Хуюассан');
@@ -18,7 +18,7 @@ import { Huifier } from './huifier';
     expect(huifier.huify('Едут')).toEqual('Хуедут');
     expect(huifier.huify('Ёжик')).toEqual('Хуёжик');
     expect(huifier.huify('Иглу')).toEqual('Хуиглу');
-    expect(huifier.huify('Окна')).toEqual('Хуёкна');
+    expect(huifier.huify('Окна')).toEqual('Хуекна');
     expect(huifier.huify('Урна')).toEqual('Хуюрна');
     expect(huifier.huify('Стык')).toEqual('Хуик');
     expect(huifier.huify('Эпос')).toEqual('Хуепос');
@@ -39,6 +39,6 @@ import { Huifier } from './huifier';
     expect(huifier.huify('   ')).toEqual('Хуй');
     expect(huifier.huify('  Вилка  ')).toEqual('Хуилка');
     expect(huifier.huify('Й')).toEqual('Хуй');
-    expect(huifier.huify('О')).toEqual('Хуё');
+    expect(huifier.huify('А')).toEqual('Хуя');
   });
 });

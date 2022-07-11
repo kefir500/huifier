@@ -6,7 +6,7 @@ pub fn huify(word: &str) -> String {
     const VOWELS: &str = "аеёиоуыэюя";
     let mut rules = HashMap::new();
     rules.insert('а', 'я');
-    rules.insert('о', 'ё');
+    rules.insert('о', 'е');
     rules.insert('у', 'ю');
     rules.insert('ы', 'и');
     rules.insert('э', 'е');

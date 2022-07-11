@@ -3,7 +3,7 @@ function huify(word) {
   const vowels = 'аеёиоуыэюя';
   const rules = {
     а: 'я',
-    о: 'ё',
+    о: 'е',
     у: 'ю',
     ы: 'и',
     э: 'е',
