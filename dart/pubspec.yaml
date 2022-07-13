@@ -1,0 +1,4 @@
+name: huifier
+environment:
+  sdk: '>=2.10.0 <3.0.0'
+dev_dependencies: {test: ^1.21.4}
