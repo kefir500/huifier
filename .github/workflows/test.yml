@@ -53,6 +53,14 @@ jobs:
         run: |
           cd php
           phpunit
+  powershell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - shell: pwsh
+        run: |
+          cd powershell
+          Invoke-Pester huifier.Tests.ps1 -Passthru
   python:
     runs-on: ubuntu-latest
     steps:
