@@ -1,3 +1,6 @@
+BeforeAll {
+    Import-Module -Name ($PSScriptRoot + "/Get-Huify.psm1")
+}
 
 Describe "Test-RandomWords" {
     It "Returns <expected> (<Word>)" -ForEach @(
@@ -8,7 +11,7 @@ Describe "Test-RandomWords" {
         @{ Word = "Круассан"; Expected = 'Хуюассан' }
         @{ Word = "Хрю"; Expected = 'Хую' }
     ) {
-        Set-Huify -Word $Word | Should -Be $Expected
+        Get-Huify -Word $Word | Should -Be $Expected
     }
 }
 
@@ -25,7 +28,7 @@ Describe "Test-VowelRules" {
         @{ Word = "Юрта"; Expected = 'Хуюрта' }
         @{ Word = "Ящик"; Expected = 'Хуящик' }
     ) {
-        Set-Huify -Word $Word | Should -Be $Expected
+        Get-Huify -Word $Word | Should -Be $Expected
     }
 }
 
@@ -35,9 +38,8 @@ Describe "Test-LetterCase" {
         @{ Word = "вилка"; Expected = 'Хуилка' }
         @{ Word = "ВИЛКА"; Expected = 'Хуилка' }
         @{ Word = "вИлКа"; Expected = 'Хуилка' }
-
     ) {
-        Set-Huify -Word $Word | Should -Be $Expected
+        Get-Huify -Word $Word | Should -Be $Expected
     }
 }
 
@@ -49,8 +51,7 @@ Describe "Test-Normalization" {
         @{ Word = "  Вилка  "; Expected = 'Хуилка' }
         @{ Word = "Й"; Expected = 'Хуй' }
         @{ Word = "А"; Expected = 'Хуя' }
-
     ) {
-        Set-Huify -Word $Word | Should -Be $Expected
+        Get-Huify -Word $Word | Should -Be $Expected
     }
 }

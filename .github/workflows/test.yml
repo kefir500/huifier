@@ -60,7 +60,7 @@ jobs:
       - shell: pwsh
         run: |
           cd powershell
-          Invoke-Pester huifier.Tests.ps1 -Passthru
+          Invoke-Pester Get-Huify.Tests.ps1 -Passthru
   python:
     runs-on: ubuntu-latest
     steps:
