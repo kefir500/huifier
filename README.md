@@ -11,6 +11,7 @@ Russian huifier (huificator) implemented in different programming languages:
 - [Java](java)
 - [JavaScript](javascript)
 - [PHP](php)
+- [PowerShell](powershell)
 - [Python](python)
 - [Ruby](ruby)
 - [Rust](rust)
