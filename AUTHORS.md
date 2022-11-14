@@ -4,6 +4,7 @@
 
 ### Alexander Gorishnyak ([kefir500](https://github.com/kefir500))
 
+- [Bash](bash)
 - [Dart](dart)
 - [Go](go)
 - [Java](java)

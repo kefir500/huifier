@@ -6,6 +6,7 @@
 
 Russian huifier (huificator) implemented in different programming languages:
 
+- [Bash](bash)
 - [Dart](dart)
 - [Go](go)
 - [Java](java)
