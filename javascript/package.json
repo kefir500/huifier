@@ -7,8 +7,8 @@
     "lint": "eslint huifier.js index.js"
   },
   "devDependencies": {
-    "eslint": "^7.28.0",
-    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint": "^9.39.1",
+    "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.23.4",
     "jasmine": "^3.4.0"
   }
